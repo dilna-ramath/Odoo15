@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="account_move_inherit_discount_sale_views">
+        <field name="name">account.move.inherit.discount.sale.views</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_totals_json']" position="before">
+                <field name="delivery_charge"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
